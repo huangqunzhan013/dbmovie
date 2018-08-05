@@ -1,0 +1,37 @@
+/* pages/detail/detail.wxss */
+/* pages/item/item.wxss */
+.meta{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+   height: 1100rpx; 
+  padding: 50rpx 40rpx;
+}
+.poster{
+  width: 80%;
+  height: 80%;
+  margin-left: 70rpx;
+}
+.title{
+  font-size: 60rpx;
+  color: #000;
+  font-weight: bold;
+}
+.info{
+  color: #888;
+  margin-top: 20rpx;
+  width: 75%;
+}
+.summary{
+  width: 90%;
+  margin: 10rpx auto;
+}
+.label {
+  display: block;
+}
+
+.content {
+  color: #777;
+  font-size: 30rpx;
+  padding: 10rpx
+}

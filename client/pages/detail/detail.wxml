@@ -1,0 +1,16 @@
+ <scroll-view scroll-y="true">
+  <view class="meta">
+<image class='poster' src='{{item.images.large}}'></image>
+<text class='title'>{{item.title}}</text>
+<text class='info'>评分：{{item.rating.average}}</text>
+<text class='info'>导演：<block wx:for="{{item.directors}}">{{item.name}}</block></text>
+<text class="info">主演：<block wx:for="{{item.casts}}"> {{item.name}} </block></text>
+  </view>
+  <view class='summary'>
+  <text class="label">摘要：</text>
+    <text class="content">{{item.summary}}</text>
+  </view>
+</scroll-view>
+<view class='body-view'>
+  <loading hidden="{{hiddenLoading}}">正在加载</loading>
+</view> 

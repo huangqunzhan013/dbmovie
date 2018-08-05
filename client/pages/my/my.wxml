@@ -1,0 +1,12 @@
+<!--pages/my/my.wxml-->
+<view class='content'>
+  <view class='motto' >
+    <image src='{{img}}'></image>
+  </view>
+  <view class='showInfo'>
+    <view class='user-name'>{{nickName}}</view>
+  </view>
+  <view class='button'>
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">{{text}}</button>
+  </view>
+</view>

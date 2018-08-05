@@ -1,0 +1,19 @@
+<scroll-view scroll-y="true" bindscrolltolower="lower" style='height:{{screen}}px' class='scroll'>
+  <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="banner" style='height:{{bannerHeight}}px'>
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode="widthFix" bindload='imgHeight' />
+      </swiper-item>
+    </block>
+  </swiper>
+  <import src="../template/movieListTpl.wxml"/>
+  <template is="movieList" data="{{movies}}"/>
+  <view class='loading-view'>
+    <image src='../assets/img/refresh.gif class='loading-img' wx:if="{{hasMore}}"></image>
+    <text wx:else class='no-data'>没有更多内容了</text>
+  </view>
+</scroll-view>
+<view class='body-view'>
+  <loading hidden="{{hiddenLoading}}">正在加载</loading>
+</view>
